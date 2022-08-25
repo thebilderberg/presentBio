@@ -1,0 +1,347 @@
+body {
+    background: rgb(255,253,251);
+    background: linear-gradient(90deg, rgba(255,253,251,1) 32%, rgba(195,147,96,1) 50%, rgba(255,255,255,1) 67%); 
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: Courier;
+    width: 100%;
+    height: 100px;
+    background: rgb(51,75,196);
+    background: radial-gradient(circle, rgba(51,75,196,1) 0%, rgba(141,46,168,1) 100%); 
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.headerIMG {
+    height: 70px;
+    padding: 0 20px;
+}
+
+.ramka {
+    height: 80px;
+    padding: 10px;
+}
+.ramka:hover {
+    opacity: 0.60;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+.parallaxStartBox {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(212,70,252,1) 100%);
+}
+
+.star {
+    transition: all 2s;
+}
+
+.star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8 {
+    position: absolute;
+    height: 50px;
+}
+
+.star1{left: 20vw; top: 30vh;}
+.star2{left: 15vw; top: 60vh;}
+.star3{left: 45vw; top: 36vh;}
+.star4{left: 40vw; top: 64vh;}
+.star5{left: 55vw; top: 34vh;}
+.star6{left: 60vw; top: 66vh;}
+.star7{left: 80vw; top: 30vh;}
+.star8{left: 85vw; top: 60vh;}
+
+
+.parallaxStartBox span {
+    font-size: 90px;
+    position: absolute;
+    left: 30vw;
+    top: 50vh;
+    font-family: fantasy;
+}
+.instructionText span {
+    font-size: 20px;
+    font-family: fantasy;
+    position: absolute;
+    top: 70vh;
+    left: 25vw;
+}
+
+.buttonHeaderOne, .buttonHeaderTwo, .buttonHeaderThree {
+    border-radius: 10px;
+    right: 20px;
+    padding: 0px 0px 0px 0px;
+    border: 0;
+    background-color: rgba(91, 5, 129, 0);
+}
+
+
+.window {
+    position: fixed;
+    width: 20vw;
+    background: black;
+    z-index: 9999;
+    height: 100%;
+    top: 100px;
+    left: -20vw;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.burgerIcon {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    height: 10vh;
+    width: 5vw;
+    transition: all 0.7s ease-in-out;
+}
+
+.burgerIcon:after, .burgerIcon:before {
+    content: '';
+}
+
+.burgerIcon span, .burgerIcon:after, .burgerIcon:before {
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    background: black;
+    transition: all 0.7s ease-in-out;
+}
+
+.burgerIcon span {
+    top: 4vh;
+}
+
+.burgerIcon:before {
+    top: 7vh;
+}
+
+.burgerIcon:after {
+    top: 1vh;
+}
+
+.burgerIcon.click {
+    left: 20vw;
+    transition: all 0.7s ease-in-out;
+}
+.window.click {
+    left: 0;
+}
+.burgerIcon.click span {
+    opacity:0;
+}
+.burgerIcon.click:after {
+    transform: rotate(38deg);
+    top: 4vh;
+}
+.burgerIcon.click:before {
+    transform: rotate(-38deg);
+    top: 4vh;
+}
+
+
+.cunteiner {
+    margin: 0 auto;
+}
+
+
+.firstBlocks {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    background-color: rgba(89, 91, 91, 0.51);
+}
+
+.board {
+    position: relative;
+    left: -2000px;
+    transition: 2s;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    font-family: arial;
+}
+
+.board.blink {
+    left: 0;
+    transition: 2s;
+}
+
+.demo {
+    opacity: 0;
+}
+
+.market {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.market_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+
+.market_img:hover {
+    opacity: 0.60;
+    transition: all 0.2s ease-in-out;
+}
+
+.secondBlock {
+    padding: 10px;
+    background-color: rgba(89, 91, 91, 0.51);
+    height: 200px;
+    text-align: center;
+    transition: 2s;
+}
+
+
+
+.inputWindow {
+    position: relative;
+    left: -2000px;
+    width: 80vw;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.inputWindow.blink {
+    left: 0;
+    transition: 1s;
+}
+
+.buttonFoot {
+    position: relative;
+    left: -2000px;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    background: rgb(51,75,196);
+    background: radial-gradient(circle, rgba(51,75,196,1) 0%, rgba(141,46,168,1) 100%); 
+}
+
+.buttonFoot.blink {
+    left: 0;
+    transition: 1.5s;
+}
+
+
+.buttonFoot:hover {
+    bbackground: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+    transition: all 2s ease-in-out;
+}
+
+footer {
+    background: rgb(51,75,196);
+    background: radial-gradient(circle, rgba(51,75,196,1) 0%, rgba(141,46,168,1) 100%);
+    height: 100px;
+    font-size: larger;
+    font-family: Courier;
+    padding: 0 0 0 20px;
+}
+
+footer span {
+    position: absolute;
+    padding: 45px 0 0 0;
+}
+
+
+
+@media (max-width: 700px) {
+    .ramka {
+        height: 50px;
+        padding: 20px 0 0 0;
+    }
+    .textParallax span {
+        font-size: 45px;
+        position: absolute;
+        left: 20vw;
+        top: 50vh;
+        font-family: fantasy;
+        text-align: center;
+        font-family: Helvetica;
+    }
+    .instructionText span {
+        position: absolute;
+        font-size: 18px;
+        top: 60vh;
+        left: 0px;
+        text-align: center;
+        font-family: Helvetica;
+    }
+    .firstBlocks {
+        display: block;
+    }
+    .market {
+        display: table;
+        padding: 10px 0px 10px 0px;
+    }
+    .star {
+        display: none;
+    }
+    .burgerIcon{
+        width: 14vw;
+    }
+    .burgerIcon:before {
+        top: 6vh;
+    }
+    .burgerIcon:after {
+        top: 2vh;
+    }
+    .window {
+        width: 70vw;
+        left: -70vw;
+    }
+    .burgerIcon.click {
+        left: 70vw;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .ramka {
+        height: 50px;
+        padding: 20px 0 0 0;
+    }
+    .textParallax span {
+        font-size: 45px;
+        position: absolute;
+        left: 35vw;
+        top: 50vh;
+        font-family: fantasy;
+        text-align: center;
+        font-family: Helvetica;
+    }
+    .instructionText span {
+        position: absolute;
+        font-size: 18px;
+        top: 60vh;
+        left: 10vw;
+        text-align: center;
+        font-family: Helvetica;
+    }
+    .firstBlocks {
+        display: block;
+    }
+    .market {
+        display: flex;
+        flex-direction: inherit;
+        justify-content: space-around;
+        padding: 10px 0px 10px 0px;
+    }
+}
