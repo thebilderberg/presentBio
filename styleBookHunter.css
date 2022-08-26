@@ -109,6 +109,7 @@ header {
     height: 10vh;
     width: 5vw;
     transition: all 0.7s ease-in-out;
+    z-index: 999;
 }
 
 .burgerIcon:after, .burgerIcon:before {
@@ -189,6 +190,8 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    z-index: 99;
 }
 .market_img {
     width: 100px;

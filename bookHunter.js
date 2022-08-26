@@ -1,6 +1,66 @@
 "use strict";
 
 
+
+function fooder() {
+    let enterName = prompt(`Как тебя зовут?`);
+    let name = enterName;
+
+
+    let enterMeat = prompt(`${name}, какое мясо ты любишь?`);        
+    let enterWay = prompt(`${name}, холодное или горячее?`)
+    let meat = enterMeat.toLowerCase();
+    let way = enterWay.toLowerCase();
+    let x = undefined;
+    let y = undefined;
+
+    let chickenArray = ['курица', 'курицу', 'кура', 'курятина', 'куру', 'курятину'];
+    let porkArray = ['свинина', 'свинину', 'кабан', 'кабана', 'свинка', 'поросенок'];
+    let beefArray = ['говядина', 'говядину', 'бычок', 'бычка', 'корова', 'корову']
+
+    if (chickenArray.includes(meat)) {
+      x = 1;
+    } else if (porkArray.includes(meat)) {
+      x = 4;
+    } else if (beefArray.includes(meat)){
+      x = 6;
+    } else {
+      x = 200;
+    }
+
+
+    if (way === 'холодное') {
+      y = 1;
+    } else if (way === 'горячее') {
+      y = 2;
+    } else {
+      y = 200;
+    }
+
+    let answer = x + y;
+    if (answer === 2) {
+      alert(`${name}, для вас Куриный салат` + `\u{1F60D}`);
+    }
+    else if (answer === 3){
+      alert(`${name}, для вас Куриный суп` + `\u{1F60D}`);
+    }
+    else if (answer === 5){
+      alert(`${name}, для вас салат из свинины` + `\u{1F60D}`);
+    }
+    else if (answer === 6){
+      alert(`${name}, для вас мясо по-французски` + `\u{1F60D}`);
+    }
+    else if (answer === 7){
+      alert(`${name}, для вас язык на тарелке` + `\u{1F60D}`);
+    }
+    else if (answer === 8){
+      alert(`${name}, для вас горячее ассорти из говядины` + `\u{1F60D}`);
+    } else {
+      alert(`${name}, такого нет в меню ` + `\u{1F60D}, может быть подумаете еще?`);
+      fooder();
+    }
+}
+
 function enterUserText(buttonEnter, window, buttonKeyOne, buttonKeyTwo, buttonKeyThree) {    //проверка на правильность решения по тексту
     let clickButtonFoot = document.querySelector(buttonEnter);
     clickButtonFoot.addEventListener('click', () => {
@@ -8,20 +68,40 @@ function enterUserText(buttonEnter, window, buttonKeyOne, buttonKeyTwo, buttonKe
         if (userText.value === 'Булгаков') {
             alert('Отлично, вы получаете ключ!');
 
+            let xxxKeyQuestion = 0;
+
 
             let buttonOneKey = document.querySelector(buttonKeyOne);
             buttonOneKey.addEventListener('click', () => {
-                alert('Промокод IVI');
+                if (xxxKeyQuestion === 0) {
+                    alert('Промокод IVI');
+                    xxxKeyQuestion = 1;
+                }
+                else {
+                    alert('Ключ уже получен!');
+                }
             });
 
             let buttonTwoKey = document.querySelector(buttonKeyTwo);
-            buttonTwoKey.addEventListener('click', () => {
-                alert('Промокод OKKO');
+            buttonTwoKey.addEventListener('click', () => { 
+                if (xxxKeyQuestion === 0) {
+                    alert('Промокод OKKO');
+                    xxxKeyQuestion = 1;
+                }
+                else {
+                    alert('Ключ уже получен!');
+                }
             });
 
             let buttonThreeKey = document.querySelector(buttonKeyThree);
             buttonThreeKey.addEventListener('click', () => {
-                alert('Промокод KINOPOISK');
+                if (xxxKeyQuestion === 0) {
+                    alert('Промокод KINOPOISK');
+                    xxxKeyQuestion = 1;
+                }
+                else {
+                    alert('Ключ уже получен!');
+                }
             });
 
 
@@ -39,69 +119,16 @@ function enterUserText(buttonEnter, window, buttonKeyOne, buttonKeyTwo, buttonKe
               ░░▐░▀▄▒▒▒▒▒▄▀▒▀▄▒▒▒▒▒▄▀▌░▌░
               `);
         } else if (userText.value === 'food') {
-            let enterName = prompt(`Как тебя зовут?`);
-            name = enterName;
-
-
-            let enterMeat = prompt(`${name}, какое мясо ты любишь?`);
-            let enterWay = prompt(`${name}, холодное или горячее?`)
-            let meat = enterMeat.toLowerCase();
-            let way = enterWay.toLowerCase();
-            let x = undefined;
-            let y = undefined;
-
-
-            let chickenArray = ['курица', 'курицу', 'кура', 'курятина', 'куру', 'курятину'];
-            let porkArray = ['свинина', 'свинину', 'кабан', 'кабана', 'свинка', 'поросенок'];
-            let beefArray = ['говядина', 'говядину', 'бычок', 'бычка', 'корова', 'корову']
-
-
-            if (chickenArray.includes(meat)) {
-              x = 1;
-            } else if (porkArray.includes(meat)) {
-              x = 4;
-            } else if (beefArray.includes(meat)){
-              x = 6;
-            } else {
-              x = 200;
-            }
-
-
-            if (way === 'холодное') {
-              y = 1;
-            } else if (way === 'горячее') {
-              y = 2;
-            } else {
-              y = 200;
-            }
-
-            let answer = x + y;
-            if (answer === 2) {
-              alert(`${name}, для вас Куриный салат` + `\u{1F60D}`);
-            }
-            else if (answer === 3){
-              alert(`${name}, для вас Куриный суп` + `\u{1F60D}`);
-            }
-            else if (answer === 5){
-              alert(`${name}, для вас салат из свинины` + `\u{1F60D}`);
-            }
-            else if (answer === 6){
-              alert(`${name}, для вас мясо по-французски` + `\u{1F60D}`);
-            }
-            else if (answer === 7){
-              alert(`${name}, для вас язык на тарелке` + `\u{1F60D}`);
-            }
-            else if (answer === 8){
-              alert(`${name}, для вас горячее ассорти из говядины` + `\u{1F60D}`);
-            } else {
-              alert(`${name}, такого нет в меню ` + `\u{1F60D}`);
-            }
+            fooder();
           } else {
             alert('Нет! Тебе стоит подучить русскую литературу, малой!')
         };
         userText.value = '';
     });
 };
+
+
+
 
 
 // ____________________________________________________________________________________________________________________________________
@@ -193,8 +220,6 @@ function textAir() {
         }
     });
 }
-
-
 
 //____________________________________________________________________________________________________pageYOffset________________________________
 
