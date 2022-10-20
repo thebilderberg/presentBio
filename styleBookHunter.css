@@ -41,15 +41,15 @@ header {
 
 
 .parallaxStartBox {
-    width: 100vw;
+    /*width: 100vw;*/
     height: 100vh;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(212,70,252,1) 100%);
 }
 
-.star {
-    transition: all 2s;
-}
+/*.star {*/
+/*    transition: all 1s;*/
+/*}*/
 
 .star1, .star2, .star3, .star4, .star5, .star6, .star7, .star8 {
     position: absolute;
@@ -66,19 +66,23 @@ header {
 .star8{left: 85vw; top: 60vh;}
 
 
-.parallaxStartBox span {
+.textParallax {
     font-size: 90px;
     position: absolute;
-    left: 30vw;
+    left: 38vw;
     top: 50vh;
-    font-family: fantasy;
+    font-family: 'Raleway', sans-serif;
 }
+
+.textParallax span{
+    color: yellow;
+}    
 .instructionText span {
-    font-size: 20px;
-    font-family: fantasy;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 70vh;
-    left: 25vw;
+    left: 20vw;
 }
 
 .buttonHeaderOne, .buttonHeaderTwo, .buttonHeaderThree {
@@ -265,29 +269,22 @@ footer span {
 }
 
 
-
 @media (max-width: 700px) {
     .ramka {
         height: 50px;
         padding: 20px 0 0 0;
     }
-    .textParallax span {
-        font-size: 45px;
+    .textParallax {
+        font-size: 80px;
         position: absolute;
-        left: 20vw;
+        left: 16vw;
         top: 50vh;
-        font-family: fantasy;
+        font-family: 'Raleway', sans-serif;
         text-align: center;
-        font-family: Helvetica;
     }
-    .instructionText span {
-        position: absolute;
-        font-size: 18px;
-        top: 60vh;
-        left: 0px;
-        text-align: center;
-        font-family: Helvetica;
-    }
+    .textParallax span{
+    color: yellow;
+    }   
     .firstBlocks {
         display: block;
     }
@@ -314,6 +311,13 @@ footer span {
     .burgerIcon.click {
         left: 70vw;
     }
+    .instructionText span {
+        font-size: 16px;
+        font-family: 'Raleway', sans-serif;
+        top: 70vh;
+        left: 0vw;
+        text-align: center;
+    }
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
@@ -321,22 +325,26 @@ footer span {
         height: 50px;
         padding: 20px 0 0 0;
     }
-    .textParallax span {
+    .textParallax {
         font-size: 45px;
         position: absolute;
         left: 35vw;
         top: 50vh;
-        font-family: fantasy;
+        font-family: 'Raleway', sans-serif;
         text-align: center;
-        font-family: Helvetica;
     }
+    
+     .textParallax span {
+         color: yellow;
+     }
+    
     .instructionText span {
         position: absolute;
         font-size: 18px;
         top: 60vh;
         left: 10vw;
         text-align: center;
-        font-family: Helvetica;
+        font-family: 'Raleway', sans-serif;
     }
     .firstBlocks {
         display: block;
@@ -346,5 +354,13 @@ footer span {
         flex-direction: inherit;
         justify-content: space-around;
         padding: 10px 0px 10px 0px;
+    }
+    
+    .textParallax {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .instructionText {
+        font-family: 'Raleway', sans-serif;
     }
 }
